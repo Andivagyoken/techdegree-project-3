@@ -1,0 +1,189 @@
+/* ===============
+   Base element styles
+================== */
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Roboto Slab', serif;
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+  font-size: 100%;
+  color: #74797D;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #312859;
+  font-size: 1.7em;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+h3 {
+  color: #B6BBBF;
+  text-align: center;
+}
+
+p {
+
+}
+
+header {
+  background-color: #F26651;
+}
+
+hr {
+  margin: 20px 0px 20px 0;
+  border:0;
+  border-bottom:2px solid #312859;
+}
+
+.subtitle {
+  padding: 2em 2em;
+}
+
+.q-label {
+  padding-bottom: 15px;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  font-weight: bold;
+  color: #312859;
+  font-size: 1.5em;
+  padding-bottom: 1.2em;
+}
+
+.footer {
+  text-align: center;
+  font-style: italic;
+  text-transform: capitalize;
+  margin: 20px;
+}
+
+/* ===============
+   Flex styles
+================== */
+
+form,
+.container,
+.item,
+.textarea-div {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  flex: none;
+  margin: 0em 1em 1em 0.5em;
+}
+
+.container {
+  min-width: 320px;
+  padding: 0.5em 1.2em;
+}
+
+.item-radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+
+/* ===============
+   Form styles
+================== */
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea,
+.state-select {
+  border: none;
+  background: #EFF0F1;
+  border-radius: 10px;
+  padding: 1em 1em;
+  margin: 15px 0px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #312859;
+}
+
+::placeholder {
+  text-align: right;
+  color: #B6BBBF;
+  font-style: italic;
+}
+
+.state-select select{
+  background: transparent;
+  border: none;
+  width: 100%;
+}
+
+.zip {
+  width: 50%;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  background: #F26651;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.8;
+}
+
+/* ===============
+   Media Queries
+================== */
+
+/* Desktop design */
+@media (min-width: 768px) {
+  .container {
+    margin: 0em 12em 0em 12em;
+  }
+
+  .item {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .item label {
+    width: 30%;
+  }
+
+  .zip {
+    width: auto;
+    }
+
+  .item input,
+  .state-select {
+    width: 70%;
+  }
